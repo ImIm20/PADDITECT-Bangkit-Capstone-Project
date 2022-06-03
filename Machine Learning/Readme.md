@@ -49,9 +49,18 @@ Freeze all the layers before the layer <br>
  7 7 6 8 2 6 6 6 6 8 1 1 8 8 0 8 3 4 1 1 6 8 6 6 8 7 1]`
 - Labels:
 `[7 0 1 0 6 6 0 5 5 7 1 1 1 9 7 7 0 4 0 0 5 7 4 6 6 7 3 1 7 6 0 8 6 5 8 8 3
- 7 7 6 8 2 6 6 6 6 8 1 1 8 6 0 8 3 4 1 1 6 8 6 6 8 7 1]`
+ 7 7 6 8 2 6 6 6 6 8 1 1 8 6 0 8 3 4 1 1 6 8 6 6 8 7 1]`<br>
  ![__results___20_1](https://user-images.githubusercontent.com/75768911/171822914-b072931b-173a-4b87-8b6a-c72d9d5dd2f7.png)
 
 ## 5. Test Dataset Submission
+- Predictions on datasets: <br>
+`predictions = model.predict(test_dataset)`
+`predictions.shape` <br>
+Found 3469 files belonging to 1 classes.
 
 ## 6. Saving Model
+- Saving model for Cloud Computing: <br>
+`model.save('./model.h5')`
+- Saving model for Android demo: <br>
+`converter = tf.lite.TFLiteConverter.from_keras_model(model)
+tflite_model = converter.convert()`
