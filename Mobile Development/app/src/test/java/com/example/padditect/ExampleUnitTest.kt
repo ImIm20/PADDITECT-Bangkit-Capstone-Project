@@ -1,4 +1,4 @@
-package com.example.padditect
+package com.example.Padditect
 
 import org.junit.Test
 

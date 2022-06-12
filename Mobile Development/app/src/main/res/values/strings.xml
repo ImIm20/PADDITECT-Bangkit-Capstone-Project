@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Padditect</string>
+    <string name="app_name">PADDITECT</string>
+    <string name="daftar">Daftar</string>
+    <string name="masukan_nama_lengkap_anda">Masukan Nama Lengkap Anda</string>
+    <string name="file_yang_diuanggah">file yang diunggah</string>
+    <string name="ambil_foto">Ambil Foto</string>
+    <string name="unggah_foto">Unggah Foto</string>
+    <string name="textview">TextView</string>
+    <string name="prediksi">Prediksi</string>
+    <string name="uploaded_file">UPLOADED FILE</string>
+    <string name="hasil_prediksi">Hasil Prediksi</string>
 </resources>
