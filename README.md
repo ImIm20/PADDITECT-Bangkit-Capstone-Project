@@ -18,13 +18,15 @@ paddy farmers to help them identify the paddy diseases and provide the solution 
 - Go-To Market presentation : 
 
 ## Project Resource: 
+- Dataset :
+- Deployed Link :
 
 
 ## Capstone Project Team: 
 | Name | Bangkit-ID | Github-Profile |
 | ------ | ------ | ------ | 
-| Alveddian Marwansyah Septian Putra  | M2009F0900  |  |
-| Imroatus Sholihah  | M7004F0159  |  |
-| Ivan Setya Ananda | M7214F1999  |  |
-| Satrio Heru Utomo | C2004F0390 |  |
-| Yogie Hidayat | C7460F3071 |  |
+| Alveddian Marwansyah Septian Putra  | M2009F0900  | https://github.com/veredithh |
+| Imroatus Sholihah  | M7004F0159  | https://github.com/ImIm20 |
+| Ivan Setya Ananda | M7214F1999  | https://github.com/ivansetya |
+| Satrio Heru Utomo | C2004F0390 | https://github.com/sakiyo212 |
+| Yogie Hidayat | C7460F3071 | https://github.com/haiyogie |
