@@ -56,7 +56,7 @@ Freeze all the layers before the layer <br>
   - dropout
   - dense
   - Output: `val_loss: 0.1514, val_accuracy:  0.9519`
-tflite model size = 16mb
+- tflite model size = 16mb
 
 ## 5. Metrics Evaluation
 - based on accuracy from the 2 models, we choose the 2nd model: 95% validation accuracy since it has less complexity and less model size
@@ -67,3 +67,19 @@ tflite model size = 16mb
 - Saving model for Android demo: <br>
 `converter = tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_model = converter.convert()`
+
+## Deploy model to cloud using flask 
+
+### Create Flask APP to deploy the model
+- load the model saved in `model.h5`
+- Save the file as `app.py`
+- Run app.py file on local machine
+<img src="https://github.com/ImIm20/PADDITECT-Bangkit-Capstone-Project/blob/main/Machine%20Learning/flasklocal.png" width=600>
+
+- Copy the URL and paste it in test.py
+<img src="https://github.com/ImIm20/PADDITECT-Bangkit-Capstone-Project/blob/main/Machine%20Learning/local%20flask%20deployment.png" width=900>
+
+### Deploy the model on GCP
+- Copy the url provided by the GCP and paste it in test.py
+<img src="https://github.com/ImIm20/PADDITECT-Bangkit-Capstone-Project/blob/main/Machine%20Learning/local%20flask%20deployment.png" width=900>
+
