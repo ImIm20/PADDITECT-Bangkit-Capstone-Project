@@ -7,12 +7,49 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1066283539234:android:d84592f619af594f3fe37b",
+        "android_client_info": {
+          "package_name": "com.example.Padditect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066283539234-rsv2l1nnj15ffoaud9q4eijbduc0v2as.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA538oUKeKV_9v8De8Vd3MpwvE90W70dxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066283539234-rsv2l1nnj15ffoaud9q4eijbduc0v2as.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1066283539234:android:5aad6ca454406c533fe37b",
         "android_client_info": {
           "package_name": "com.example.padditect"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1066283539234-n9ien3f8mi0bpm2on8n9rl8uus46osjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.padditect",
+            "certificate_hash": "fc7c7241c19b793ff688e572675e3b904ad091f2"
+          }
+        },
         {
           "client_id": "1066283539234-rsv2l1nnj15ffoaud9q4eijbduc0v2as.apps.googleusercontent.com",
           "client_type": 3

@@ -12,6 +12,7 @@ import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,14 +26,13 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
 import com.example.padditect.ml.Model;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.firebase.auth.FirebaseAuth;
+
+import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    Button camera, gallery, logout;
+    Button camera, gallery;
     ImageView imageView;
-    TextView result, name, mail, status ;
+    TextView result, status;
     int imageSize = 500;
 
     @Override
@@ -40,48 +40,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        camera = findViewById(R.id.ambil_foto);
-        gallery = findViewById(R.id.unggahh_foto);
+        camera = findViewById(R.id.button);
+        gallery = findViewById(R.id.button2);
 
-        result = findViewById(R.id.teks_prediksi);
+        result = findViewById(R.id.textView);
         imageView = findViewById(R.id.imageUploaded);
-        status = findViewById(R.id.status_padi);
-
-        //profile
-        logout = findViewById(R.id.logout);
-        name = findViewById(R.id.name);
-        mail = findViewById(R.id.mail);
-
-        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
-        if(signInAccount != null){
-            name.setText(signInAccount.getDisplayName());
-            mail.setText(signInAccount.getDisplayName());
-        }
-
-        logout.setOnClickListener(view -> {
-            FirebaseAuth.getInstance().signOut();
-            Intent intent = new Intent(getApplicationContext(), LoginGoogle.class);
-            startActivity(intent);
-        });
+        status = findViewById(R.id.textView4);
 
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent open_camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(open_camera, 100);
+                if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(cameraIntent, 3);
+                } else {
+                    requestPermissions(new String[]{Manifest.permission.CAMERA}, 100);
+                }
             }
         });
-        /*camera.setOnClickListener(view -> {
-            if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(cameraIntent, 3);
-            } else {
-                requestPermissions(new String[]{Manifest.permission.CAMERA}, 100);
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cameraIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(cameraIntent, 1);
             }
-        });*/
-        gallery.setOnClickListener(view -> {
-            Intent cameraIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivityForResult(cameraIntent, 1);
         });
     }
 
@@ -134,22 +116,16 @@ public class MainActivity extends AppCompatActivity {
                     "dead_heart",
                     "bacterial_panicle_blight"};
             result.setText(classes[maxPos]);
-            //status padi
-            /*if(result = "normal"){
+
+            /*if(result.setText(classes[7])){
                 status.setText("SEHAT");
                 status.setTextColor(Color.GREEN);
-            }else if(result = "hispa" || "downy mildew" || "dead_heart"){
-                status.setText("SERANGGA");
-                status.setTextColor(Color.RED);
-            }else if(result = "brown spot" || "blast"){
-                status.setText("JAMUR");
-                status.setTextColor(Color.RED);
             }else{
-                status.setText("BAKTERI");
+                status.setText("TIDAK SEHAT");
                 status.setTextColor(Color.RED);
             }*/
 
-            //lepaskan model apabila sudah tidak digunakan
+            // Releases model resources if no longer used.
             model.close();
         } catch (IOException e) {
             // TODO Handle the exception
@@ -159,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(resultCode == RESULT_OK){
-            if(requestCode == 100){
+            if(requestCode == 3){
                 Bitmap image = (Bitmap) data.getExtras().get("data");
                 int dimension = Math.min(image.getWidth(), image.getHeight());
                 image = ThumbnailUtils.extractThumbnail(image, dimension, dimension);

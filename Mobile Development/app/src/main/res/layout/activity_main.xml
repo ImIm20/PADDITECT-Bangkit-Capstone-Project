@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FFF"
     tools:context=".MainActivity">
 
     <ImageView
@@ -21,32 +20,30 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/ambil_foto"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="40dp"
-        android:backgroundTint="#40E0D0"
         android:text="@string/ambil_foto"
-        app:layout_constraintEnd_toStartOf="@+id/unggahh_foto"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageUploaded" />
 
     <Button
-        android:id="@+id/unggahh_foto"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="45dp"
-        android:backgroundTint="#40E0D0"
-        android:text="@string/unggahh_foto"
+        android:text="@string/unggah_foto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageUploaded" />
 
     <TextView
-        android:id="@+id/teks_prediksi"
-        android:layout_width="200dp"
+        android:id="@+id/textView"
+        android:layout_width="125dp"
         android:layout_height="23dp"
         android:layout_marginStart="120dp"
         android:layout_marginEnd="120dp"
@@ -55,24 +52,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prediksi" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/status_padi"
-        android:layout_width="200dp"
+        android:id="@+id/textView4"
+        android:layout_width="125dp"
         android:layout_height="23dp"
         android:layout_marginStart="120dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="105dp"
+        android:layout_marginBottom="150dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prediksi" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/prediksi"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -80,40 +77,10 @@
         android:layout_marginEnd="170dp"
         android:layout_marginBottom="25dp"
         android:text="@string/hasil_prediksi"
-        app:layout_constraintBottom_toTopOf="@+id/teks_prediksi"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/unggahh_foto" />
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#40E0D0"
-        android:text="Logout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/logout"
-        app:layout_constraintHorizontal_bias="0.942"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mail" />
-
-    <TextView
-        android:id="@+id/mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/logout"
-        app:layout_constraintHorizontal_bias="0.942"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
