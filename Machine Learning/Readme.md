@@ -81,5 +81,5 @@ tflite_model = converter.convert()`
 
 ### Deploy the model on GCP
 - Copy the url provided by the GCP and paste it in test.py
-<img src="https://github.com/ImIm20/PADDITECT-Bangkit-Capstone-Project/blob/main/Machine%20Learning/local%20flask%20deployment.png" width=900>
+<img src="https://github.com/ImIm20/PADDITECT-Bangkit-Capstone-Project/blob/main/Machine%20Learning/flask%20deployed%20in%20gcp.png" width=900>
 
