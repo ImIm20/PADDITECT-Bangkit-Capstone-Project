@@ -13,13 +13,13 @@ paddy farmers to help them identify the paddy diseases and provide the solution 
 
 
 ## Project Documents:
-- Project Brief :
-- Final presentation : 
-- Go-To Market presentation : 
+- Project Brief : https://docs.google.com/document/d/1jbiaiXdv-ov9LLWFzrOvCsuCM9Hd4yPphcNYO6QjypI/edit?usp=sharing
+- Final presentation : https://docs.google.com/presentation/d/1yeyiLLbIfgu92jHxUocdxKi9eG2H-8w685pceamjHRo/
+- Go-To Market presentation : https://docs.google.com/presentation/d/1FuTHOjG5FtagBc5THJDJGgDxhZpv5vnE4otRSxxZKC4/edit?usp=sharing
 
 ## Project Resource: 
-- Dataset :
-- Deployed Link :
+- Dataset : https://www.kaggle.com/competitions/paddy-disease-classification/data
+- Deployed Link : https://drive.google.com/file/d/1ktGlE6jZqBYjdo3NTa-BAkZI6zR0AGI7/view?usp=sharing
 
 
 ## Capstone Project Team: 
